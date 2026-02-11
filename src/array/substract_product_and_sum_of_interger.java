@@ -12,8 +12,8 @@ public class substract_product_and_sum_of_interger {
                 sum = sum + temp;
                 num = num / 10;
             }
-            int result = product - sum;
-            return result;
+            int results = product - sum;
+            return results;
         }
     }
 }
