@@ -1,8 +1,7 @@
 package array;
 
 public class substract_product_and_sum_of_interger {
-    public static void main(String[] args) {
-        int subtractProductAndSum; (int n){
+        public static int subtractProductAndSum(int n){
             int product = 1;
             int sum = 0;
             int num = n;
@@ -16,5 +15,4 @@ public class substract_product_and_sum_of_interger {
             return results;
         }
     }
-}
 
