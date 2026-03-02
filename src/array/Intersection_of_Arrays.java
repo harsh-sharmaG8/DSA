@@ -1,6 +1,8 @@
 package array;
-//
-//    public int[] intersection(int[] nums1, int[] nums2) {
+
+import java.util.ArrayList;
+
+//public int[] intersection(int[] nums1, int[] nums2) {
 //        ArrayList<Integer> array = new ArrayList<>();
 //        for(int i=0; i<nums1.length;i++){
 //            for(int j=0; j<nums2.length; j++){
@@ -11,15 +13,14 @@ package array;
 //                }
 //            }
 //        }
-//        int[] result = new int[array.size()];
+    //  int[] result = new int[array.size()];
 //        for(int i = 0; i < array.size(); i++) {
 //            result[i] = array.get(i);
 //        }
 //        return result;
-//
 //    }
 
-import java.util.ArrayList;
+import ArrayList;
 
 //BY TWO POINTER
 public class Intersection_of_Arrays {
