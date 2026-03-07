@@ -2,7 +2,23 @@ package array;
 import java.util.*;
 
 public class two_sum {
-        public static boolean twoSum(int[] arr, int target) {
+    public static boolean twoSum(int[] arr, int target) {
+//        HashMap<Integer, Integer> map = new HashMap<>();
+//
+//        for (int i = 0; i < nums.length; i++) {
+//
+//            int complement = target - nums[i];
+//
+//            // if complement already seen
+//            if (map.containsKey(complement)) {
+//                return new int[]{map.get(complement), i};
+//            }
+//
+//            // store number with index
+//            map.put(nums[i], i);
+//
+//
+//        return new int[]{-1, -1}; // no solution
             Arrays.sort(arr);
 
             int left = 0;
@@ -31,3 +47,6 @@ public class two_sum {
             System.out.println(twoSum(arr, target));
         }
     }
+
+
+

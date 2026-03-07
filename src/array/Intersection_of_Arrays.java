@@ -1,6 +1,8 @@
 package array;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 //public int[] intersection(int[] nums1, int[] nums2) {
 //        ArrayList<Integer> array = new ArrayList<>();
@@ -20,9 +22,23 @@ import java.util.ArrayList;
 //        return result;
 //    }
 
-import ArrayList;
 
-//BY TWO POINTER
+//BY HASHMAP
+//public static ArrayList<Integer> intersection(int[] arr1, int[] arr2){
+//    ArrayList<Integer> array = new ArrayList<>();
+//    Map<Integer, Integer> map= new HashMap<>();
+//    for(int num: arr1){
+//        map.put(num , map.getOrDefault(num,0)+1);
+//    }
+//    for(int num :arr2){
+//        if(map.containsKey(num) && map.get(num)>0){
+//            array.add(num);
+//            map.put(num, map.get(num)-1);
+//        }
+//    }
+//}
+
+        //BY TWO POINTER
 public class Intersection_of_Arrays {
     public static ArrayList<Integer> intersection(int[] arr1, int[] arr2) {
         ArrayList<Integer> array = new ArrayList<>();
@@ -50,3 +66,4 @@ public class Intersection_of_Arrays {
         System.out.println(intersection(a,b));
     }
 }
+
