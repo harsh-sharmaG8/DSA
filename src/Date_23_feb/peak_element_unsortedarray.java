@@ -1,43 +1,26 @@
 package Date_23_feb;
 
 public class peak_element_unsortedarray {
-    public static int findPeakElement(int[] nums) {
-        int s = 0;
-        int e = nums.length - 1;
-        while (s < e) {
-            int mid = s + (e - s) / 2;
-            if (nums[mid] > nums[mid + 1]) {
-                e = mid;
-            } else {
-                s = mid + 1;
+    static int findPeak(int[] arr) {
+        int low = 0, high = arr.length - 1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if ((arr[mid] >= arr[mid-1]) && arr[mid] >= arr[mid+1]) {
+                return mid;
+            }
+            else if (arr[mid-1] > arr[mid]) {
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+
             }
         }
-        return s;
+        return -1;
     }
-//        int s=0;
-//        int n= arr.length-1;
-//        int e=n;
-//        int ans=0;
-//        while(s<e){
-//            if(arr[s]>=arr[e]){
-//                if(arr[ans]<arr[s]){
-//                    ans=s;
-//                }
-//                s++;
-//            }
-//            else{
-//                if(arr[ans]<arr[e]){
-//                    ans=e;
-//                }
-//                e--;
-//            }
-//        }
-//
-//        return ans;
-
-    public static void main(String[] args) {
-        int[] nums = {9, 7, 3, 7, 8};
-        System.out.println(findPeakElement(nums));
+     public static void main(String[] args) {
+        int[] nums = {5,4,3,2};
+        System.out.println(findPeak(nums));
 
     }
 }

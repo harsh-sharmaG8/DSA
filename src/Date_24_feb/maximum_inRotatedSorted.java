@@ -9,7 +9,7 @@ public class maximum_inRotatedSorted {
                 if (mid < e && nums[mid] > nums[mid + 1]) {
                     return nums[mid];
                 }
-                if (nums[mid] >= nums[s]) {
+                if (nums[mid] >= nums[s]){
                     s = mid + 1;
                 }
                 else {
