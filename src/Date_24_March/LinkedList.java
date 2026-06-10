@@ -2,6 +2,7 @@ package Date_24_March;
 
 import java.util.Scanner;
 
+
 public class LinkedList {
     class Node {
             int data;
@@ -13,7 +14,7 @@ public class LinkedList {
             }
         }
         Node head;
-        // Create linked list using user input
+    // Create linked list using user input
         public void createList() {
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter number of elements: ");
@@ -34,7 +35,7 @@ public class LinkedList {
                 temp = newNode;
             }
         }
-        // Display list
+//         Display list
         public void display() {
             Node temp = head;
             while (temp != null) {
@@ -43,6 +44,43 @@ public class LinkedList {
             }
             System.out.println("null");
         }
+//         reverse list
+        public Node reverseList() {
+            Node temp=head;
+            Node prev=null;
+            while(temp!=null){
+                Node front=temp.next;
+                temp.next=prev;
+                prev = temp;
+                temp=front;
+
+            }
+            return prev;
+        }
+//      find middle element
+        public Node middleNode() {
+            if (head == null || head.next == null) return head;
+            Node slow=head,fast=head;
+            while(fast != null && fast.next != null){
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            return slow;
+        }
+//      delete middle element
+        public Node deleteMiddle() {
+            if (head == null || head.next == null) return null;
+            Node slow=head,fast=head, prev=null;
+            while(fast != null && fast.next != null){
+                prev = slow;
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            prev.next= slow.next;
+            return head;
+
+        }
+
 
         public static void main(String[] args) {
             LinkedList list = new LinkedList();
@@ -50,37 +88,20 @@ public class LinkedList {
             list.createList();   // directly creating LL from input
             System.out.println("Linked List:");
             list.display();
+            System.out.println("Reversed linkedlist:");
+            list.head= list.reverseList();
+            list.display();
+            Node midelement= list.middleNode();
+            System.out.println("The middle element is:" + midelement.data);
+
+
         }
+
 }
 
 
-
-// REVERSE THE LINKED LIST
-
-// public ListNode reverseList(ListNode head) {
-//    ListNode prev=null;
-//    ListNode temp=head;
-//    while(temp!=null){
-//        ListNode  front=temp.next;
-//        temp.next=prev;
-//        prev = temp;
-//        temp=front;
-//
-//    }
-//    return prev;
-//}
-
-//RETURN THE MIDDLE ELEMENT
-
-//public ListNode middleNode(ListNode head) {
-//    if (head == null || head.next == null) return head;
-//    ListNode slow=head,fast=head;
-//    while(fast != null && fast.next != null){
-//        slow = slow.next;
-//        fast = fast.next.next;
-//    }
-//    return slow;
-//
+//     for first middle;
+//      while(fast!=null && fast.next.next!=null)
 
 
 // REMOVE DUPLICATES IN SORTED DOUBLY LINKEDLIST

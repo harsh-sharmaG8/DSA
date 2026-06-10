@@ -2,14 +2,15 @@ package array;
 
 public class RemoveDuplicate {
     public static int removeDuplicates(int[] arr) {
-        int j=0;
-        for(int i=1;i<arr.length;i++){
+        int count=0;
+        int i=0;
+        for(int j=1;j<arr.length;j++){
             if(arr[j]!=arr[i]){
-                j++;
-                arr[j]=arr[i];
+                count++;
+                arr[i]=arr[j];
             }
         }
-        return j+1;
+        return count+1;
     }
 
     public static void main(String[] args) {

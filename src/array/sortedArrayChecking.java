@@ -13,7 +13,7 @@ public class sortedArrayChecking {
         }
 
     public static void main(String[] args) {
-        int[] arr={2,4,5,7,8};
+        int[] arr={7,8,2,4,5,};
         System.out.println(check(arr));
 
     }
