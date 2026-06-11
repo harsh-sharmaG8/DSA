@@ -5,7 +5,6 @@ public class nearly_sorted_array {
         int s = 0;
         int n = arr.length;
         int e = n - 1;
-        int ans = -1;
         while (s <= e) {
             int mid = s + (e - s) / 2;
             if (arr[mid] == target) {
