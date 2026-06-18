@@ -5,10 +5,10 @@ public class MinimumSize_subarraySum {
         int sum = 0;
         int l = 0;
         int minsize = Integer.MAX_VALUE;
-        for (int r = 0; r < arr.length; r++) {
-            sum += arr[r];
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
             while (sum >= target) {
-                minsize = Math.min(minsize, r - l + 1);
+                minsize = Math.min(i - l + 1, minsize);
                 sum -= arr[l];
                 l++;
             }
@@ -21,4 +21,3 @@ public class MinimumSize_subarraySum {
         System.out.println(minimum_size(arr, 7));
     }
 }
-

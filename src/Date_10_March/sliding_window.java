@@ -25,7 +25,7 @@ public class sliding_window {
 //                sum +=arr[j];
 //                max= Math.max(max,sum);
 //            }
-//        }
+//
 //        return max;
 //    }
 
@@ -34,3 +34,5 @@ public class sliding_window {
         System.out.println(sliding(arr, 3));
     }
 }
+
+
