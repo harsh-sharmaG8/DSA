@@ -19,7 +19,7 @@ public class Min_time_visit_all_points_1266 {
     }
 }
 
-/// exaplanation:
+/// explanation:
 //Consider two consecutive points:
 //
 //        (x1, y1) → (x2, y2)
