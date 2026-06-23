@@ -22,3 +22,4 @@ public class Minimum_subArray {
         System.out.println(minimum_subarray(arr));
     }
 }
+/// it gives the maximum sum of a contiguous subarray
