@@ -74,3 +74,38 @@ public class Number_of_island {
 //        int ncol= col + delcol[i];
 //    }
 //}
+
+//class Solution {
+//    public void dfs(int row, int col, int[][] vis, char[][] grid, int n, int m) {
+//        // Base cases - stop recursion if:
+//        if (row < 0 || col < 0 || row >= n || col >= m) return; // out of bounds
+//        if (vis[row][col] == 1) return;   // already visited
+//        if (grid[row][col] == '0') return; // water cell
+//
+//        // Mark current cell visited
+//        vis[row][col] = 1;
+//
+//        // Recurse in all 4 directions
+//        dfs(row - 1, col, vis, grid, n, m); // up
+//        dfs(row + 1, col, vis, grid, n, m); // down
+//        dfs(row, col - 1, vis, grid, n, m); // left
+//        dfs(row, col + 1, vis, grid, n, m); // right
+//    }
+//
+//    public int numIslands(char[][] grid) {
+//        int row = grid.length;
+//        int col = grid[0].length;
+//        int count = 0;
+//        int[][] vis = new int[row][col];
+//
+//        for (int i = 0; i < row; i++) {
+//            for (int j = 0; j < col; j++) {
+//                if (grid[i][j] == '1' && vis[i][j] == 0) {
+//                    count++;
+//                    dfs(i, j, vis, grid, row, col);
+//                }
+//            }
+//        }
+//        return count;
+//    }
+//}
