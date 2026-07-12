@@ -1,4 +1,4 @@
-package Date_24_March;
+package LinkedList.Date_24_march;
 
 public class Remove_dup_fromDoublyLinkedlist {
     class Node {

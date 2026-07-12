@@ -29,7 +29,7 @@ public class Subsets {
 //CALL backtrack(start=0), tempSet=[]
 //        │
 //        ├─ SAVE: resultSets = [ [] ]                         ← saved on entry, tempSet is []
-//│
+//        │
 //        ├─ i=0: tempSet.add(1) → tempSet=[1]
 //        │  │
 //        │  └─ CALL backtrack(start=1), tempSet=[1]
@@ -49,14 +49,14 @@ public class Subsets {
 //        │     │     │     ├─ SAVE: resultSets = [ [], [1], [1,2], [1,2,3] ]
 //        │     │     │     └─ for loop: i starts at 3, but nums.length=3 → loop doesn't run
 //        │     │     │        RETURN (nothing to undo here, we return straight up)
-//│     │     │
+//        │     │     │
 //        │     │     │  tempSet.remove(last) → tempSet=[1,2]     ← BACKTRACK (undo the "3")
-//│     │     │
+//        │     │     │
 //        │     │     └─ i=3: loop ends (i < nums.length fails)
-//│     │        RETURN
-//│     │
+//        │     │        RETURN
+//        │     │
 //        │     │  tempSet.remove(last) → tempSet=[1]              ← BACKTRACK (undo the "2")
-//│     │
+//        │     │
 //        │     ├─ i=2: tempSet.add(3) → tempSet=[1,3]
 //        │     │  │
 //        │     │  └─ CALL backtrack(start=3), tempSet=[1,3]
@@ -64,14 +64,14 @@ public class Subsets {
 //        │     │     ├─ SAVE: resultSets = [ [], [1], [1,2], [1,2,3], [1,3] ]
 //        │     │     └─ for loop: i=3, doesn't run
 //        │     │        RETURN
-//│     │
+//        │     │
 //        │     │  tempSet.remove(last) → tempSet=[1]               ← BACKTRACK (undo the "3")
-//│     │
+//        │     │
 //        │     └─ i=3: loop ends
-//│        RETURN
-//│
+//        │        RETURN
+//        │
 //        │  tempSet.remove(last) → tempSet=[]                       ← BACKTRACK (undo the "1")
-//│
+//        │
 //        ├─ i=1: tempSet.add(2) → tempSet=[2]
 //        │  │
 //        │  └─ CALL backtrack(start=2), tempSet=[2]
@@ -85,14 +85,14 @@ public class Subsets {
 //        │     │     ├─ SAVE: resultSets = [ [], [1], [1,2], [1,2,3], [1,3], [2], [2,3] ]
 //        │     │     └─ for loop: i=3, doesn't run
 //        │     │        RETURN
-//│     │
+//        │     │
 //        │     │  tempSet.remove(last) → tempSet=[2]                ← BACKTRACK (undo the "3")
-//│     │
+//        │     │
 //        │     └─ i=3: loop ends
-//│        RETURN
-//│
+//        │        RETURN
+//        │
 //        │  tempSet.remove(last) → tempSet=[]                        ← BACKTRACK (undo the "2")
-//│
+//        │
 //        ├─ i=2: tempSet.add(3) → tempSet=[3]
 //        │  │
 //        │  └─ CALL backtrack(start=3), tempSet=[3]
@@ -100,8 +100,8 @@ public class Subsets {
 //        │     ├─ SAVE: resultSets = [ [], [1], [1,2], [1,2,3], [1,3], [2], [2,3], [3] ]
 //        │     └─ for loop: i=3, doesn't run
 //        │        RETURN
-//│
+//        │
 //        │  tempSet.remove(last) → tempSet=[]                         ← BACKTRACK (undo the "3")
-//│
+//        │
 //        └─ i=3: loop ends
 //RETURN (top level done)

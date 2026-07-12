@@ -1,4 +1,4 @@
-package Date_24_March;
+package LinkedList.Date_24_march;
 
 import java.util.Scanner;
 
