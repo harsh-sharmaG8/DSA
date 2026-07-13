@@ -1,5 +1,14 @@
 package LinkedList.Date_13_july;
 
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+        next = null;
+    }
+}
 public class detect_cycle {
     public boolean hasCycle(ListNode head) {
         ListNode slow = head, fast = head;
@@ -9,16 +18,6 @@ public class detect_cycle {
             if (slow == fast) return true;
         }
         return false;
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
     }
 }
 
