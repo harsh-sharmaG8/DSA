@@ -1,5 +1,4 @@
 package Date_22_feb;
-
 import java.util.Arrays;
 
 public class square_of_sortedarray {
