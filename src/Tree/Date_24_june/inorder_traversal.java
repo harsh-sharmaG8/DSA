@@ -1,22 +1,24 @@
-package Tree;
+package Tree.Date_24_june;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class postorder_traversal {
-    public static List<Integer> postorderTraversal(TreeNode root){
+public class inorder_traversal {
+    public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        postorder(root, ans);
+        inorder(root, ans);
         return ans;
     }
-    public static void postorder(TreeNode root, List<Integer> ans){
-        if(root==null) {
+
+    private static void inorder(TreeNode root, List<Integer> ans) {
+        if (root == null) {
             return;
         }
-        postorder(root.left, ans);
-        postorder(root.right, ans);
-        ans.add(root.val);
-
+        inorder(root.left, ans);  // Left
+        ans.add(root.val);        // Root
+        inorder(root.right, ans); // Right
     }
+
     public static void main(String[] args) {
 
         // Build this tree:
@@ -32,7 +34,6 @@ public class postorder_traversal {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
 
-        System.out.println(postorderTraversal(root));
+        System.out.println(inorderTraversal(root));
     }
 }
-

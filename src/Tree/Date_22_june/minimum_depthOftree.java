@@ -3,7 +3,7 @@ package Tree.Date_22_june;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class minimum_depthOftree {
+public class  minimum_depthOftree {
     public static int mindepth(TreeNode root) {
         if (root == null) {
             return 0;

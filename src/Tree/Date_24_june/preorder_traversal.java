@@ -1,24 +1,23 @@
-package Tree;
+package Tree.Date_24_june;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class inorder_traversal {
-    public static List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> ans = new ArrayList<>();
-        inorder(root, ans);
+public class preorder_traversal {
+    public static List<Integer> preorderTraversal(TreeNode root){
+        List<Integer> ans= new ArrayList<>();
+        preorder(root,ans);
         return ans;
     }
-
-    private static void inorder(TreeNode root, List<Integer> ans) {
-        if (root == null) {
+    public static void preorder(TreeNode root, List<Integer> ans){
+        if(root==null){
             return;
         }
-        inorder(root.left, ans);  // Left
-        ans.add(root.val);        // Root
-        inorder(root.right, ans); // Right
-    }
+        ans.add(root.val);
+        preorder(root.left, ans);
+        preorder(root.right, ans);
 
+    }
     public static void main(String[] args) {
 
         // Build this tree:
@@ -34,6 +33,8 @@ public class inorder_traversal {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
 
-        System.out.println(inorderTraversal(root));
+        System.out.println(preorderTraversal(root));
+        // Output: [1, 2, 4, 5, 3]
     }
 }
+

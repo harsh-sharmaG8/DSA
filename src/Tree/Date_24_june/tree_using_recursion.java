@@ -1,4 +1,4 @@
-package Tree;
+package Tree.Date_24_june;
 
 import java.util.Scanner;
 
