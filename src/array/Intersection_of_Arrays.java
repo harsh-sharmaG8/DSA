@@ -29,7 +29,7 @@ import java.util.Map;
 //    Map<Integer, Integer> map= new HashMap<>();
 //    for(int num: arr1){
 //        map.put(num , map.getOrDefault(num,0)+1);
-//    }
+//        }
 //    for(int num :arr2){
 //        if(map.containsKey(num) && map.get(num)>0){
 //            array.add(num);
