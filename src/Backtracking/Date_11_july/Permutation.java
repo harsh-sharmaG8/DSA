@@ -13,6 +13,7 @@ public class Permutation {
     public static void backtrack(List<List<Integer>> resultSet, List<Integer> tempset, int[] nums){
         if(tempset.size()==nums.length){
             resultSet.add(new ArrayList<>(tempset));
+            return;
 
         }
         for(int num: nums){
@@ -67,7 +68,7 @@ public class Permutation {
 //        │     │     │  └─ CALL backtrack(), tempList=[1,3,2]
 //        │     │     │     size==3 → SAVE [1,3,2]              ✅ resultList=[[1,2,3],[1,3,2]]
 //        │     │     │     RETURN
-//        │     │
+//        │     │     |
 //        │     │     │  remove(last) → tempList=[1,3]            ← BACKTRACK "2"
 //        │     │     ├─ number=3: contains? YES → SKIP
 //        │     └─ loop ends, RETURN

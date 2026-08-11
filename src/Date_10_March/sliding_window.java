@@ -6,6 +6,7 @@ public class sliding_window {
         int max= Integer.MIN_VALUE;
         for(int i=0; i<k; i++){
             sum+=arr[i];
+            max = Math.max(max,sum);
         }
         for(int i=k; i<arr.length; i++){
             sum = sum-arr[i-k]+arr[i];
@@ -30,7 +31,7 @@ public class sliding_window {
 //    }
 
     public static void main(String[] args) {
-        int[] arr ={2,1,5,1,3,2};
+        int[] arr ={2,1,5,1};
         System.out.println(sliding(arr, 3));
     }
 }

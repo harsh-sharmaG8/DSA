@@ -1,6 +1,6 @@
 package Array.Date_8_july;
 
-import java.util.*;
+import java.util.*;  //1200
 
 public class Absolute_min_differnce {
     public static List<List<Integer>> minimumAbsDifference(int[] arr) {
