@@ -1,6 +1,6 @@
 package Date_23_feb;
 
-public class first_ocuurence {
+public class  first_ocuurence {
     public static int first_occurences(int[] arr, int target) {
         int s = 0;
         int n = arr.length;

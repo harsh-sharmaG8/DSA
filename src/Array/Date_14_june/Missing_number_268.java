@@ -17,6 +17,17 @@ public class Missing_number_268 {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
 // for sum of an array
 //   int sum=0;
 //   for(int i=o; i<arr.lrngth; i++){

@@ -34,8 +34,9 @@ public class search_inrotated_sorted {
     }
 
     public static void main(String[] args) {
-        int[] arr={4,5,6,7,0,1,2};
-        System.out.println(search(arr,0));
+//        int[] arr={4,5,6,7,0,1,2};
+        int[] arr={3,4,5,1,2};
+        System.out.println(search(arr,1));
 
     }
 }

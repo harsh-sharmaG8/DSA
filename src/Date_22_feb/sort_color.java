@@ -23,13 +23,14 @@ public class sort_color {
                 arr[mid] = arr[high];
                 arr[high] = temp;
                 high--;
+                mid++;
             }
         }
         return arr;
     }
 
     public static void main(String[] args) {
-        int[] arr={2,0,2,1,1,0};
+        int[] arr={2,0,2,1,1,1};
         System.out.println(Arrays.toString(sortColors(arr)));
     }
 }
